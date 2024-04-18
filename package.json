@@ -1,0 +1,16 @@
+{
+  "name": "30_ejercicios_javascript",
+  "version": "1.0.0",
+  "description": "Escribir una función llamada `sumarRango` que reciba dos argumentos: número inicial y número final. La función debe retornar la suma de los números en ese rango (incluyéndolos).",
+  "main": "js/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node js/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-prompt": "^1.0.1"
+  }
+}
