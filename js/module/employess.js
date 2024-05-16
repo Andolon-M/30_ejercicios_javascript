@@ -32,7 +32,7 @@ export const getBossFullNameAndEmail = async()=>{
     });
     return dataUpdate;
 }
-//5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados 
+// 5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados 
 // que no sean representantes de ventas.
 export const getAllEmployeesNotSalesReps = async()=>{
     let res = await fetch("http://localhost:5502/employees?position_ne=Representante%20Ventas")

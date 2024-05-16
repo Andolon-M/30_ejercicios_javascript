@@ -54,7 +54,7 @@
     "payments": "json-server js/db/payments.json -p 5505",
     "products": "json-server js/db/products.json -p 5506",
     "request_details": "json-server js/db/request_details.json -p 5507",
-    "request": "json-server js/db/request.json -p 5508"
+    "requests": "json-server js/db/requests.json -p 5508"
   },
   "keywords": [],
   "author": "",

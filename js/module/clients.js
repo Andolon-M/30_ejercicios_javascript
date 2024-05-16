@@ -28,6 +28,30 @@ export const getAllClients = async() =>{
     return data;
 }
 
+
+// 6. Devuelve un listado con el nombre de los todos los clientes españoles.
+
+export const getAllClientsFromSpain = async() =>{
+    let res = await fetch("http://localhost:5501/clients?country=Spain")
+    let data = await res.json();
+    let dataUpdate = [];
+    data.forEach(val => {
+        dataUpdate.push({
+            nombre_cliente: val.client_name,
+            nombre_contacto: val.contact_name,
+            apellido_contacto: val.contact_lastname,
+            telefono: val.phone,
+            fax: val.fax,
+            direccion1: val.address1,
+            direccion2: val.address2,
+            ciudad: val.city,
+
+        })
+    });
+    return dataUpdate;
+}
+
+
 // Consultas multitabla (Composición interna)
 
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
