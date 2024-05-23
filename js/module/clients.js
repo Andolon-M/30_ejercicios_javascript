@@ -12,7 +12,7 @@ import {
 // Resuelva la consulta:
 
 export const getAll2 = async()=>{
-    let res = await fetch("http://localhost:5501/clients")
+    let res = await fetch("http://172.16.101.146:5643/clients")
     let data = await res.json();
     data.filter(val=>{
         // if(val.)
@@ -23,7 +23,7 @@ export const getAll2 = async()=>{
 
 // Obtener la informacion de un empleado por su codigo
 export const getAllClients = async() =>{
-    let res = await fetch(`http://localhost:5501/clients`);
+    let res = await fetch(`http://172.16.101.146:5643/clients`);
     let data = await res.json();
     return data;
 }
@@ -32,7 +32,7 @@ export const getAllClients = async() =>{
 // 6. Devuelve un listado con el nombre de los todos los clientes españoles.
 
 export const getAllClientsFromSpain = async() =>{
-    let res = await fetch("http://localhost:5501/clients?country=Spain")
+    let res = await fetch("http://172.16.101.146:5643/clients?country=Spain")
     let data = await res.json();
     let dataUpdate = [];
     data.forEach(val => {
@@ -57,7 +57,7 @@ export const getAllClientsFromSpain = async() =>{
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
 // junto con la ciudad de la oficina a la que pertenece el representante.
 export const getClientsEmploy = async() =>{
-    let res = await fetch("http://localhost:5501/clients");
+    let res = await fetch("http://172.16.101.146:5643/clients");
     let clients = await res.json();
     for (let i = 0; i < clients.length; i++) {
         let {
@@ -127,7 +127,7 @@ export const getClientsEmploy = async() =>{
 // 16. Devuelve un listado con todos los clientes que sean de la ciudad de Madrid 
 // y cuyo representante de ventas tenga el código de empleado 11 o 30.
 export const getAllClientsFromSpainAndRepresentative11Or30 = async ()=> {
-    let res = await fetch ("http://localhost:5501/clients?city=Madrid")
+    let res = await fetch ("http://172.16.101.146:5643/clients?city=Madrid")
     let data = await res.json()
     let dataUpdate = []
 

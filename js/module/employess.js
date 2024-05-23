@@ -4,7 +4,7 @@ import {
 // 3. Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe 
 // tiene un código de jefe igual a 7.
 export const getAllEmployeesWithBossAndCodeSeven = async() =>{
-    let res = await fetch("http://localhost:5502/employees?code_boss=7")
+    let res = await fetch("http://172.16.101.146:5644/employees?code_boss=7")
     let data = await res.json();
     let dataUpdate = [];
     data.forEach(val => {
@@ -20,7 +20,7 @@ export const getAllEmployeesWithBossAndCodeSeven = async() =>{
 // 4. Devuelve el nombre del puesto, nombre, apellidos y email del jefe de la 
 // empresa.
 export const getBossFullNameAndEmail = async()=>{
-    let res = await fetch("http://localhost:5502/employees");
+    let res = await fetch("http://172.16.101.146:5644/employees");
     let data = await res.json();
     let dataUpdate = {};
     data.forEach(val => {
@@ -35,7 +35,7 @@ export const getBossFullNameAndEmail = async()=>{
 // 5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados 
 // que no sean representantes de ventas.
 export const getAllEmployeesNotSalesReps = async()=>{
-    let res = await fetch("http://localhost:5502/employees?position_ne=Representante%20Ventas")
+    let res = await fetch("http://172.16.101.146:5644/employees?position_ne=Representante%20Ventas")
     let data = await res.json();
     let dataUpdate = [];
     data.forEach(val => {
@@ -52,13 +52,13 @@ export const getAllEmployeesNotSalesReps = async()=>{
 
 // Obtener la informacion de un empleado por su codigo
 export const getEmployByCode = async(code) =>{
-    let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
+    let res = await fetch(`http://172.16.101.146:5644/employees?employee_code=${code}`);
     let dataClients = await res.json();
     return dataClients;
 }
 // Obtener la informacion de un empleado por su codigo
 export const getAllEmploy = async() =>{
-    let res = await fetch(`http://localhost:5502/employees`);
+    let res = await fetch(`http://172.16.101.146:5644/employees`);
     let data = await res.json();
     return data;
 }

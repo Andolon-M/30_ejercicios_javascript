@@ -1,7 +1,7 @@
 // 7. Devuelve un listado con los distintos estados por los que puede pasar un pedido.
 export const getOrderStatuses  = async () => {
     try {
-        let res = await fetch("http://localhost:5508/requests");
+        let res = await fetch("http://172.16.101.146:5768/requests");
         let data = await res.json();
         
         // Extraer estados únicos de los pedidos
